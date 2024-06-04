@@ -1,0 +1,25 @@
+{
+  "name": "cucumber-cy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --browser chrome",
+    "test:critico": "npx cypress run --env TAGS='@critico'",
+    "test:medio": "npx cypress run --env TAGS='@medio'",
+    "test:smoke": "npx cypress run --env TAGS='@smoke'"
+  },
+    "stepDefinitions": [
+      "cypress/support/step_definitions/**/*.{js,ts}"
+    ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.10.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+    "@cypress/browserify-preprocessor": "^3.0.2"
+  }
+}
